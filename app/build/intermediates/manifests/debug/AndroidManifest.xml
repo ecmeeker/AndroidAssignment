@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.cs496.assignment3.assignment3app"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:maxSdkVersion="20"
+        android:minSdkVersion="10"
+        android:targetSdkVersion="20" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.cs496.assignment3.assignment3app.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.cs496.assignment3.assignment3app.CameraActivity"
+            android:label="@string/title_activity_camera"
+            android:parentActivityName="com.cs496.assignment3.assignment3app.MainActivity" >
+
+            <!-- Parent activity met-data for supporting v4.0 and below -->
+            <meta-data
+                android:name="android:support.PARENT_ACTIVITY"
+                android:value="com.cs496.assignment3.MainActivity" />
+        </activity>
+        <activity
+            android:name="com.cs496.assignment3.assignment3app.AirHockeyActivity"
+            android:label="@string/title_activity_air_hockey"
+            android:parentActivityName="com.cs496.assignment3.assignment3app.MainActivity" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Search action button -->
+    <item android:id="@+id/action_search"
+        android:title="@string/action_search"
+        android:showAsAction="ifRoom"
+        tools:ignore="AppCompatResource" />
+    <!-- Settings in action overflow -->
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:showAsAction="never"
+        tools:ignore="AppCompatResource" />
+
+</menu>
